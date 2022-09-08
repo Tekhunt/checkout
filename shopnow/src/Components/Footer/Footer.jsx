@@ -10,7 +10,7 @@ export const Footer = () => {
     <FooterWrapper>
       <div className="foot-contianer">
         <div className="foot-map">
-          <h2 className="first">About RiteShop</h2>
+          <h2 className="first">About ShopNow</h2>
           <p>About us</p>
           <p>Careers</p>
           <p>Help center</p>
