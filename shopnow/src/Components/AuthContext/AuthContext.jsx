@@ -20,14 +20,14 @@ export const AuthProvider = ({ children }) => {
   );
   const [loading, setLoading] = useState(true);
 
-  const loginUser = async (username, password) => {
+  const loginUser = async (email, password) => {
     const response = await fetch("http://127.0.0.1:8000/api/token/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        username,
+        email,
         password
       })
     });
@@ -36,6 +36,7 @@ export const AuthProvider = ({ children }) => {
     if (response.status === 200) {
       setAuthTokens(data);
       setUser(jwt_decode(data.access));
+      console.log(authTokens)
       localStorage.setItem("authTokens", JSON.stringify(data));
       navigate("/");
     } else {

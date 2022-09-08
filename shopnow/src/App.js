@@ -5,6 +5,7 @@ import { HomePage } from "./Pages/HomePage/HomePage";
 import { Footer } from "./Components/Footer";
 import Register from "./Components/Register/Register";
 import { AuthProvider } from "./Components/AuthContext/AuthContext";
+import { Login } from "./Components/Login";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             <Route element={<HomePage />} path="/" />
             <Route element={<Footer />} path="/footer" />
             <Route element={<Register />} path="/register" />
-            <Route element={<h1>login</h1>} path="/login" />
+            <Route element={<Login />} path="/login" />
           </Routes>
         </AuthProvider>
       </Router>

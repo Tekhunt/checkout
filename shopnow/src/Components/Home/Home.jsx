@@ -2,6 +2,8 @@ import React from "react";
 import { HomeWrapper } from "./HomeStyles";
 
 export const Home = () => {
+    const authUser = JSON.parse(localStorage.getItem('user') || '{}')
+    console.log(authUser)
   return (
     <HomeWrapper>
       <div className="grid-two">
