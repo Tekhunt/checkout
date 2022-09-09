@@ -6,6 +6,8 @@ import { Footer } from "./Components/Footer";
 import Register from "./Components/Register/Register";
 import { AuthProvider } from "./Components/AuthContext/AuthContext";
 import { Login } from "./Components/Login";
+import { ProductDetails } from "./Components/ProductDetails";
+import { CartPage } from "./Pages/CartPage/CartPage";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route element={<Footer />} path="/footer" />
             <Route element={<Register />} path="/register" />
             <Route element={<Login />} path="/login" />
+            {/* <Route element={<CartPage />} path="/product" /> */}
+            <Route element={<CartPage />} path="/product/:id" />
           </Routes>
         </AuthProvider>
       </Router>
